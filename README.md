@@ -4,6 +4,16 @@ This is a collection of notes about the [Microsoft 3D Movie Maker source code](h
 
 **NOTE:** This is not official documentation, and will almost certainly have some inaccuracies. If you find something that isn't correct, please create an issue or a pull request to fix it. Contributions are welcome!
 
+## Source repos
+
+* Official repo: https://github.com/microsoft/Microsoft-3D-Movie-Maker
+* Forks:
+  * [3DMM Forever](https://github.com/foone/3DMMForever) by [Foone Turing](https://twitter.com/foone)
+  * [Clemenswasser's fork](https://github.com/clemenswasser/Microsoft-3D-Movie-Maker)
+  * [Frank Weindel's fork](https://github.com/frank-weindel/3DMMForever)
+  * [My fork](https://github.com/benstone/Microsoft-3D-Movie-Maker)
+  * [Other forks](https://github.com/microsoft/Microsoft-3D-Movie-Maker/network)
+
 ## Source tree layout
 
 * SRC: The source code for Socrates/3DMM
