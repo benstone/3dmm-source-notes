@@ -101,6 +101,8 @@ The build expects the BRender and AudioMan libraries to be present in `elib` and
 
 ## Build Tools
 
+These tools are built as part of Kauai. The binaries will be in `kauai\obj\<build-type>`.
+
 ### Chomp
 
 Chomp is a compiler used to generate chunky files. The Kauai makefile rules run the C preprocessor over the CHT files before calling Chomp.
@@ -108,6 +110,10 @@ Chomp is a compiler used to generate chunky files. The Kauai makefile rules run 
 The source tree includes a document describing the [syntax used by Chomp](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/CHOMP.DOC).
 
 The CHT files use a lot of macros to reduce code duplication. Many of these macros are defined in [KIDGS.H](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/INC/KIDGS.H).
+
+### Chelp
+
+Chelp is an editor for help topics. Help topics are also used for tooltips, dialog boxes, Talent Book pages, etc.
 
 ### Mkmbmp
 
@@ -173,10 +179,12 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * AudioMan: Audio library used in multiple Microsoft Home products
 * [BACO](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CRF.H): Base cacheable object (ie. a serializable object)
 * BRender: 3D rendering library developed by Argonaut Technologies
+* [BWLD](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/INC/BWLD.H): BRender World class
 * [CEX](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CMD.CPP#L12): Command execution dispatcher: Kauai class that manages dispatching messages to command handler objects (subclasses of CMH)
 * Ched: Chunky editor: GUI tool for editing chunky files
 * Chelp: GUI tool for editing help content inside chunky files
 * [CHID](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): Child chunk ID
+* CID: Command ID
 * Chomp: Chunky compiler: compiles .CHT files and creates Chunky files
 * [Chunky](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): File format used for resources, scripts and movie files
 * [CKI](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): Chunk identifier: combination of a ctg and cno
@@ -190,23 +198,33 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * [FNI](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FNI.H): File name class
 * [GG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): General group
 * [GL](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): General list
+* [GNV](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GFX.H): Graphics Environment
 * [GOB](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GOB.H): Graphical object
 * [GOK](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/KIDSPACE.H): Graphical object in Kidspace
+* [GOKD](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/KIDWORLD.H): GOK Descriptor
+* [GORP](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/KIDSPACE.H): Graphical object representation. Has subclasses for bitmaps (GORB), fills (GORF), tiled bitmaps (GORT), and video (GORV).
+* [GPT](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GFX.H): Graphics port. Implemented in [GFXWIN.CPP](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GFXWIN.CPP) for Windows and [GFXMAC.CPP](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GFXMAC.CPP) for the Macintosh.
 * [GST](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): String table
+* [HBAL](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/KIDHELP.h): Help Balloon
 * [Hungarian Notation](http://www.byteshift.de/msg/hungarian-notation-doug-klunder): Coding style used in many Microsoft projects in the 1990s
 * Kauai: Application framework used by 3D Movie Maker and Creative Writer 2
 * [KCDC](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CODKAUAI.CPP): Kauai Codec compression algorithm
 * [KCD2](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CODKAUAI.CPP): Variant of Kauai Codec that supports multi-byte runs of uncompressed data
 * Kidspace: Kauai scripting system
+* [MDPS](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/MIDIDEV2.H): MIDI player class
 * MBMP: Masked Bitmap
 * Mkmbmp: Tool that converts a BMP file into a MBMP, and optionally compresses it with KCDC/KCD2
 * Playdo: Unknown project related to Socrates (do you know what this is? let me know!)
 * RTM: Release to manufacturing
+* [SDAM](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDAM.CPP): Sound device class that wraps the AudioMan library
 * Sitobren: Tool to convert 3D models from SoftImage to BRender
+* [SNDM](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDM.H): Sound Manager
+* [SNDV](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDM.H): Sound Device - base class for AudioMan wrapper class and MIDI player class
 * Socrates: Codename for 3D Movie Maker
 * [STN](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/UTILSTR.H): String class
 * [Tag Manager](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/INC/TAGMAN.H): Class that manages caching content from the CD
 * Tdfmake: 3D font authoring tool
+* [TGOB](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/INC/TGOB.H): Text rendering GOB
 * TRD: Test Release Document
 * [Utest](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/SRC/STUDIO/UTEST.CPP): Internal name of the main program executable
 * WOKS: World of Kidspace. Contains GOKs, help balloons and script interpreters.
