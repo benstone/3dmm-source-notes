@@ -196,7 +196,7 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * ELIB: Directory name used for external static libraries
 * [ERS](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/UTILERRO.H): Error stack class used for error reporting
 * [FNI](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FNI.H): File name class
-* [FTG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FNI.H): File type
+* [FTG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FNI.H#L49): File type
 * [GG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): General group
 * [GL](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): General list
 * [GNV](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GFX.H): Graphics Environment
