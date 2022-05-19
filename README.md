@@ -188,14 +188,17 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * Chomp: Chunky compiler: compiles .CHT files and creates Chunky files
 * [Chunky](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): File format used for resources, scripts and movie files
 * [CKI](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): Chunk identifier: combination of a ctg and cno
+* [CLOK](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CLOK.CPP): Clock
 * [CMH](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CMD.CPP#L19): Command handler: a class that can receive commands
 * [CNO](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): Chunk number
 * [CODM](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CODEC.CPP): Codec manager
+* [CSAPI](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CSAPI.H): Spell checking API shared with other Microsoft apps. Likely implemented in Kauai for CW2.
 * [CTG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CHUNK.CPP): Chunk tag / type
 * DKIT: SoftImage SDK
 * ELIB: Directory name used for external static libraries
 * [ERS](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/UTILERRO.H): Error stack class used for error reporting
 * [FNI](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FNI.H): File name class
+* [FT](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FT.CPP): Frame Test - Kauai test app. Includes some unit tests for the Kauai framework.
 * [FTG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/FNI.H#L49): File type
 * [GG](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): General group
 * [GL](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/DOC/GROUPS.TXT): General list
@@ -215,7 +218,9 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * [MDPS](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/MIDIDEV2.H): MIDI player class
 * MBMP: Masked Bitmap
 * Mkmbmp: Tool that converts a BMP file into a MBMP, and optionally compresses it with KCDC/KCD2
+* [NTL](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/GFX.h#79): Font list
 * Playdo: Unknown project related to Socrates (do you know what this is? let me know!)
+* RawRtn: Macro indicating unimplemented code. Usually within an `#ifdef MAC` block.
 * RTM: Release to manufacturing
 * [SDAM](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDAM.CPP): Sound device class that wraps the AudioMan library
 * Sitobren: Tool to convert 3D models from SoftImage to BRender
@@ -229,3 +234,4 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * TRD: Test Release Document
 * [Utest](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/SRC/STUDIO/UTEST.CPP): Internal name of the main program executable
 * WOKS: World of Kidspace. Contains GOKs, help balloons and script interpreters.
+* Z Release: [World English release](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/SETUP/CUSTDLL/APPSETUP.MAK#L968)
