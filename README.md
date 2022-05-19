@@ -171,6 +171,20 @@ Serializable classes will generally inherit from the BACO (base cacheable object
 * The [setup build script](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/SETUP/3DMOVIE.DDF) generates the final CD layout and places it on a server called `\\SHEILA`.
 * The setup directory includes some code from Microsoft Explorapedia (codenamed Sendak), including what appears to be [a setup Easter egg](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/SETUP/CUSTDLL/CREDITS.CPP).
 
+## Patents
+
+* [US5771033](https://www.google.com/patents/US5771033): Dissolve effect
+* [US5825363](https://www.google.com/patents/US5825363): Determining visible surfaces
+* [US5867175](https://patents.google.com/patent/US5867175): Scripting engine architecture
+* [US5970496](https://www.google.com/patents/US5970496): Chunky file format
+* [US5986675](https://www.google.com/patents/US5986675): Selecting objects in a 3D space
+
+Patents for other Microsoft Kids products:
+
+* [US5621875A](https://patents.google.com/patent/US5621875A): Creative Writer's automatic text formatting
+* [US5636340A](https://patents.google.com/patent/US5636340A): Creative Writer's text animations
+* [US5724074](https://patents.google.com/patent/US5724074): Unreleased programming application featuring McZee
+
 ## Glossary
 
 * ACME: Setup framework used by many Microsoft products in the 1990s
