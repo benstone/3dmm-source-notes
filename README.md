@@ -99,6 +99,23 @@ Object files and executable files have been removed from the build.
 
 The build expects the BRender and AudioMan libraries to be present in `elib` and `kauai\elib` respectively. These libraries can be obtained from [3DMMForever](https://github.com/foone/3DMMForever). Place them in subdirectories that match the build type (eg. `WINS` for the ANSI release).
 
+#### AudioMan
+
+AudioMan is an audio library used in 3DMM and several other Microsoft multimedia products from the mid-late 90s.
+
+Features that use AudioMan:
+
+* Kauai
+  * Kauai has a sound device class that uses AudioMan to play WAVE sounds. This is the SNDAM class.
+  * The sound device is initialized in [APPB::_FInitSound](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/APPB.CPP#L645)
+  * Debug builds call AudioMan's `DetectLeaks()` function on exit (in [APPB::_CleanUp](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/APPB.CPP#L732)) to check for memory leaks.
+* 3DMM
+  * Importing movie sounds
+    * AudioMan is used for converting imported sounds to 11025Hz Mono 8-bit.
+    * Imported sounds are also compressed using ADPCM. AudioMan has support for converting audio using Microsoft's Audio Compression Manager but 3DMM reimplements it for some reason.
+  * Sound recorder
+    * AudioMan is used to play back the recorded sound and to apply filters after recording.
+
 ## Build Tools
 
 These tools are built as part of Kauai. The binaries will be in `kauai\obj\<build-type>`.
@@ -188,12 +205,15 @@ Patents for other Microsoft Kids products:
 ## Glossary
 
 * ACME: Setup framework used by many Microsoft products in the 1990s
+* [AMNOT](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDAMPRI.H#L119): AudioMan notification sink class. Contains a callback that is used to notify Kauai when sounds have finished playing.
+* [AMQUE](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDAMPRI.H#L153): AudioMan queue class
 * [APP](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/INC/UTEST.H): Application class
-* [APPB](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/APPB.H): Kauai base class for application 
+* [APPB](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/APPB.H): Kauai base class for application
 * AudioMan: Audio library used in multiple Microsoft Home products
 * [BACO](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CRF.H): Base cacheable object (ie. a serializable object)
 * BRender: 3D rendering library developed by Argonaut Technologies
 * [BWLD](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/INC/BWLD.H): BRender World class
+* [CAMS](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/SNDAMPRI.H#L88): Cached AudioMan Sound. Encapsulates a sound object that supports the IAMSound interface.
 * [CEX](https://github.com/microsoft/Microsoft-3D-Movie-Maker/blob/main/kauai/SRC/CMD.CPP#L12): Command execution dispatcher: Kauai class that manages dispatching messages to command handler objects (subclasses of CMH)
 * Ched: Chunky editor: GUI tool for editing chunky files
 * Chelp: GUI tool for editing help content inside chunky files
